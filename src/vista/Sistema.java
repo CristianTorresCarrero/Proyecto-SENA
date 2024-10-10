@@ -2648,7 +2648,7 @@ public class Sistema extends javax.swing.JFrame {
             dato.setCorreo(txt_CorreoEmpresa.getText().trim());
             dato.setId(Integer.parseInt(txt_IdEmpresa.getText().trim()));
             prodao.modificarDatos(dato);
-            JOptionPane.showMessageDialog(null, "Datos de la Empresa Modificado");
+            JOptionPane.showMessageDialog(null, "Datos de la Empresa Modificado con Exito");
             ListarEmpresa();
         } else {
             JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
@@ -3424,7 +3424,7 @@ public class Sistema extends javax.swing.JFrame {
             Font negrita = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, new BaseColor(75, 0, 130));
             fecha.add(Chunk.NEWLINE);
             Date date = new Date();
-            fecha.add("Factura: " + codigoVenta() + id + "\n" + "Fecha: " + new SimpleDateFormat("dd-MM-yyyy").format(date) + "\n\n");
+            fecha.add("Recibo: " + codigoVenta() + id + "\n" + "Fecha: " + new SimpleDateFormat("dd-MM-yyyy").format(date) + "\n\n");
 
             PdfPTable Encabezado = new PdfPTable(4);
             Encabezado.setWidthPercentage(100);
